@@ -1,0 +1,325 @@
+<p>部分内容来自：<a href="https://zh.javascript.info/">https://zh.javascript.info/</a></p>
+<p>几何</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="602" viewBox="0 0 670 602">
+    <defs>
+    </defs>
+    <defs>
+        <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" />
+            <stop offset="100%" stop-color="#F1F1F1" />
+        </linearGradient>
+        <linearGradient id="linearGradient-2" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" />
+            <stop offset="100%" stop-color="#F1F1F1" />
+        </linearGradient>
+    </defs>
+    <g id="dom" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g id="metric-all.svg"><text id="Introduction" fill="#5A4739" font-family="OpenSans-Bold, Open Sans"
+                font-size="16" font-weight="bold">
+                <tspan x="160" y="94">Introduction</tspan>
+                <tspan x="160" y="122" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    This Ecma Standard is based on several </tspan>
+                <tspan x="160" y="141" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    originating technologies, the most well </tspan>
+                <tspan x="160" y="160" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    known being JavaScript (Netscape) and </tspan>
+                <tspan x="160" y="179" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    JScript (Microsoft). The language was </tspan>
+                <tspan x="160" y="198" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    invented by Brendan Eich at Netscape and </tspan>
+                <tspan x="160" y="217" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    first appeared in that company’s Navigator </tspan>
+                <tspan x="160" y="236" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">2.0
+                    browser. It has appeared in all </tspan>
+                <tspan x="160" y="255" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    subsequent browsers from Netscape and </tspan>
+                <tspan x="160" y="274" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">in
+                    all browsers from Microsoft starting with </tspan>
+                <tspan x="160" y="293" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Internet Explorer 3.0.</tspan>
+                <tspan x="160" y="312" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">The
+                    development of this Standard started </tspan>
+                <tspan x="160" y="331" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">in
+                    November 1996. The first edition of this </tspan>
+                <tspan x="160" y="350" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Ecma Standard was adopted by the Ecma </tspan>
+                <tspan x="160" y="369" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    General Assembly of June 1997.</tspan>
+                <tspan x="160" y="388" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    That Ecma Standard was submitted to ISO/</tspan>
+                <tspan x="160" y="407" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">IEC
+                    JTC 1 for adoption under the fast-track </tspan>
+                <tspan x="160" y="426" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    procedure, and approved as international </tspan>
+                <tspan x="160" y="445" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    standard ISO/IEC 16262, in April 1998. The </tspan>
+                <tspan x="160" y="464" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Ecma General Assembly of June 1998 </tspan>
+                <tspan x="160" y="483" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    approved the second edition of ECMA-262 </tspan>
+                <tspan x="160" y="502" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">to
+                    keep it fully aligned with ISO/IEC 16262. </tspan>
+                <tspan x="160" y="521" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Changes between the first and the second </tspan>
+                <tspan x="160" y="540" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    edition are editorial in nature.</tspan>
+            </text>
+            <path id="Rectangle-1" fill="#E8C48F" fill-opacity=".88"
+                d="M491 162v290H117V162h374zm-25 25H142v240h324V187z" />
+            <path id="Rectangle-2" stroke="#E8C48F" stroke-opacity=".8" stroke-width="2" d="M141 62h326v500H141z" />
+            <text id="scrollHeight" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 592 310)">
+                <tspan x="541.6" y="314.5">scrollHeight</tspan>
+            </text><text id="offsetHeight" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 552 310)">
+                <tspan x="501.6" y="314.5">offsetHeight</tspan>
+            </text><text id="scrollTop" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 618 125)">
+                <tspan x="580.2" y="129.5">scrollTop</tspan>
+            </text>
+            <path id="Line-27" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M466.5 62H640" />
+            <path id="Line-28" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M492.5 163h92.14" />
+            <path id="Line-29" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M492.5 451h92.14" />
+            <path id="Line-33" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M467.5 189H640" />
+            <path id="Line-32" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M467.5 427h72.14" />
+            <path id="Line-26" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M466.5 561h148.14" />
+            <path id="Line-25" fill="#EE6B47" fill-rule="nonzero"
+                d="M605 64.5l7 14h-6v466h6l-7 14-7-14h6v-466h-6l7-14z" />
+            <path id="Line-30" fill="#EE6B47" fill-rule="nonzero"
+                d="M565 164.5l7 14h-6v255h6l-7 14-7-14h6v-255h-6l7-14z" /><text id="clientHeight" fill="#EE6B47"
+                font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"
+                transform="rotate(-90 510 304)">
+                <tspan x="459.6" y="308.5">clientHeight</tspan>
+            </text>
+            <path id="Line-34" fill="#EE6B47" fill-rule="nonzero"
+                d="M523 191.5l7 14h-6v206h6l-7 14-7-14h6v-206h-6l7-14z" /><text id="offsetTop" fill="#EE6B47"
+                font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"
+                transform="rotate(-90 104 83)">
+                <tspan x="66.2" y="87.5">offsetTop</tspan>
+            </text><text id="clientLeft" fill="#C74A6C" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 130.5 237)">
+                <tspan x="88.5" y="241.5">clientLeft</tspan>
+            </text>
+            <path id="Line-36" fill="#EE6B47" fill-rule="nonzero"
+                d="M117 4.5l7 14h-6v128h6l-7 14-7-14h6v-128h-6l7-14z" />
+            <path id="Line-31" fill="#EE6B47" fill-rule="nonzero"
+                d="M631 64.5l7 14h-6v96.499l6 .001-7 14-7-14 6-.001V78.5h-6l7-14z" />
+            <path id="Rectangle-14" fill="#FFF" fill-opacity=".88" d="M154 73h312v89H154z" />
+            <path id="Rectangle-15" fill="#FFF" fill-opacity=".88" d="M154 451h312v93H154z" />
+            <path id="Line-39" fill="#EE6B47" fill-rule="nonzero"
+                d="M431 479.09l14 7-14 7-.001-6h-271.36l.001 6-14-7 14-7-.001 6h271.36l.001-6z" />
+            <path id="Line-42" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M445.64 510v-84" />
+            <path id="Line-43" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M141.64 510v-84" /><text id="clientWidth" fill="#EE6B47" font-family="PTMono-Regular, PT Mono"
+                font-size="14" font-weight="normal">
+                <tspan x="261.3" y="478">clientWidth</tspan>
+            </text>
+            <path id="Line-41" fill="#EE6B47" fill-rule="nonzero"
+                d="M100 156.09l14 7-14 7v-6H18.639l.001 6-14-7 14-7-.001 6H100v-6z" /><text id="clientTop"
+                fill="#C74A6C" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal">
+                <tspan x="147.7" y="178">clientTop</tspan>
+            </text><text id="offsetLeft" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal">
+                <tspan x="17.5" y="154">offsetLeft</tspan>
+            </text>
+            <path id="Line-40" fill="#EE6B47" fill-rule="nonzero"
+                d="M475 522.09l14 7-14 7-.001-6h-340.36l.001 6-14-7 14-7-.001 6h340.36l.001-6z" />
+            <path id="Line-45" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M490.64 551V447" />
+            <path id="Line-44" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M116.64 551V447" /><text id="offsetWidth" fill="#EE6B47" font-family="PTMono-Regular, PT Mono"
+                font-size="14" font-weight="normal">
+                <tspan x="258.3" y="516">offsetWidth</tspan>
+            </text>
+            <path id="Rectangle-233" stroke="#8A704D" stroke-width="2" d="M1 1h668v600H1z" />
+            <g id="Scrollbar" transform="translate(450 187)">
+                <rect id="Rectangle-19" width="15" height="239" x=".5" y=".5" fill="#F3F2F2" stroke="#E9E9E9" rx="3" />
+                <g id="Rectangle-18-+-Triangle-1">
+                    <rect id="Rectangle-18" width="15" height="19" x=".5" y=".5" fill="url(#linearGradient-1)"
+                        stroke="#CFCFCF" rx="3" />
+                    <path id="Triangle-1" fill="#92979F" d="M8 7l3.2 6H4.8z" />
+                </g>
+                <g id="Rectangle-18-+-Triangle-2" transform="matrix(1 0 0 -1 0 240)">
+                    <rect id="Rectangle-18" width="15" height="19" x=".5" y=".5" fill="url(#linearGradient-1)"
+                        stroke="#CFCFCF" rx="3" />
+                    <path id="Triangle-1" fill="#92979F" d="M8 7l3.2 6H4.8z" />
+                </g>
+                <g id="Rectangle-18-+-Triangle-3-+-Group" transform="translate(0 50)">
+                    <g id="Rectangle-18-+-Triangle-3" fill="url(#linearGradient-2)" stroke="#CFCFCF"
+                        transform="matrix(1 0 0 -1 0 51)">
+                        <rect id="Rectangle-18" width="15" height="50" x=".5" y=".5" rx="3" />
+                    </g>
+                    <g id="Group" fill="#D8D8D8" stroke="#979797" transform="translate(4 20)">
+                        <path id="Rectangle-22" d="M.5.5h7v1h-7z" />
+                        <path id="Rectangle-23" d="M.5 3.5h7v1h-7z" />
+                        <path id="Rectangle-24" d="M.5 6.5h7v1h-7z" />
+                        <path id="Rectangle-25" d="M.5 9.5h7v1h-7z" />
+                    </g>
+                </g>
+            </g>
+            <g id="Group" transform="translate(115 162)">
+                <g id="Line-4-+-Line-5" stroke="#C74A6C" stroke-linecap="square" stroke-width="2"
+                    transform="translate(23 19)">
+                    <path id="Line-4" d="M2.5.5L0 6" transform="matrix(1 0 0 -1 0 6)" />
+                    <path id="Line-5" d="M5.5.5L3 6" transform="rotate(180 4.5 3)" />
+                </g>
+                <g id="Line-4-+-Line-6" stroke="#C74A6C" stroke-linecap="square" stroke-width="2"
+                    transform="matrix(1 0 0 -1 23 7)">
+                    <path id="Line-4" d="M2.5.5L0 6" transform="matrix(1 0 0 -1 0 6)" />
+                    <path id="Line-5" d="M5.5.5L3 6" transform="rotate(180 4.5 3)" />
+                </g>
+                <path id="Line-49" stroke="#C74A6C" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"
+                    d="M26.5 26h-25" />
+                <path id="Line-50" stroke="#C74A6C" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"
+                    d="M26 25.5V.5" />
+                <path id="Line-4" fill="#C74A6C" fill-rule="nonzero"
+                    d="M20.003 22.176l.91.414 5.5 2.5.911.413-.59 1.296.09.198-.225.1-.102.227-.198-.09-.385.176-5.5 2.5-.91.414-.828-1.82.91-.414 4.297-1.954-3.797-1.726-.91-.413.827-1.821zM7.997 22.176l.827 1.82-.91.414-3.798 1.726 4.298 1.954.91.413-.827 1.821-.91-.414-5.5-2.5-.387-.176-.197.09-.102-.225-.225-.102.089-.198-.59-1.296.911-.413 5.5-2.5.91-.414z" />
+            </g>
+        </g>
+    </g>
+</svg>
+
+<ol>
+<li>确定 offsetParent, 用于计算坐标<ul>
+<li>上级中 position 为 absolute、relative、fixed 的</li>
+<li>td,th,table</li>
+<li>body</li>
+</ul>
+</li>
+<li>offsetLeft,offsetTop 都是相对于 offsetParent 的</li>
+</ol>
+<p>elem.getBoundingClientRect()</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="521" height="411" viewBox="0 0 521 411">
+    <g id="dom" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g id="coordinates.svg">
+            <g id="noun_69008_cc" fill="#E8C48E" transform="translate(13 11)">
+                <path id="Shape"
+                    d="M490.563 386H10.438C4.676 386 0 381.658 0 376.35V9.65C0 4.342 4.676 0 10.438 0h480.125C496.303 0 501 4.343 501 9.65v366.7c0 5.308-4.697 9.65-10.438 9.65zm-480.4-12.939h478.642V12.94H10.162V373.06z" />
+                <path id="Shape"
+                    d="M20.859 54.1c-5.753 0-10.422-1.147-10.422-2.55 0-1.402 4.67-2.55 10.422-2.55H479.4c5.732 0 10.422 1.148 10.422 2.55 0 1.403-4.69 2.55-10.422 2.55H20.86zM33.8 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0zM63.988 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0zM94.177 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0z" />
+            </g><text id="height" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="417" y="208">height</tspan>
+            </text><text id="bottom" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="451" y="311">bottom</tspan>
+            </text>
+            <path id="Line-28" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M395 293h103" />
+            <path id="Line-30" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M392 296v74.5" />
+            <path id="Line-30-Copy" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M119 296v46" />
+            <path id="Line-29" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M396 120h30" /><text id="x" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14"
+                font-weight="bold">
+                <tspan x="62" y="113">x</tspan>
+            </text><text id="left" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="50" y="135">left</tspan>
+            </text><text id="y" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="125" y="79">y</tspan>
+            </text><text id="width" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="234" y="339">width</tspan>
+            </text>
+            <path id="Line" fill="#EE6B47" fill-rule="nonzero" d="M414 118.5V273h8l-9.5 19-9.5-19h8V118.5h3z" />
+            <path id="Line-Copy" fill="#999" fill-rule="nonzero" d="M476 65v208h8l-9.5 19-9.5-19h8V65h3z" />
+            <path id="Line-2" fill="#EE6B47" fill-rule="nonzero"
+                d="M371 309l19 9.5-19 9.5-.001-8H116v-3h254.999l.001-8z" />
+            <path id="Line-3" fill="#EE6B47" fill-rule="nonzero"
+                d="M100.05 109.903l18.95 9.6-19.05 9.4.042-8.001-76.5-.402-1.5-.008.016-3 1.5.008 76.5.402.042-8z" />
+            <text id="right" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="180" y="375">right</tspan>
+            </text>
+            <path id="Line-3-Copy-2" fill="#999" fill-rule="nonzero" d="M371 350l19 9.5-19 9.5v-8H21.005v-3H371v-8z" />
+            <path id="Line-3-Copy" fill="#EE6B47" fill-rule="nonzero"
+                d="M119 65v1.5l.003 34.249h8l-9.498 19.001-9.502-19h8L116 66.5V65h3z" />
+            <path id="Rectangle-1" fill="#E8C48F" fill-opacity=".88"
+                d="M392.629 119v175H118V119h274.629zM382 129H129v155h253V129z" /><text id="Introduction-This-Ec"
+                fill="#5A4739" font-family="OpenSans-Bold, Open Sans" font-size="16" font-weight="bold" opacity=".8">
+                <tspan x="138.946" y="153.8">Introduction</tspan>
+                <tspan x="138.946" y="181.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">This Ecma Standard is based on </tspan>
+                <tspan x="138.946" y="200.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">several originating technologies, </tspan>
+                <tspan x="138.946" y="219.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">the most well known being </tspan>
+                <tspan x="138.946" y="238.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">JavaScript (Netscape) and JScript </tspan>
+                <tspan x="138.946" y="257.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">(Microsoft). The language was </tspan>
+                <tspan x="138.946" y="276.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">invented by Brendan Eich at </tspan>
+            </text><text id="top" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="125" y="96">top</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
+
+<style>
+    .parent,.child,.warp {
+        box-sizing:content-box;
+    }
+  .parent {
+    border: 50px solid #333;
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+  }
+  .child {
+    background-color: red;
+    border: 20px solid #333;
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+  }
+  .warp {
+    padding: 100px;
+    border: 10px solid green;
+  }
+</style>
+<div class="warp">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<div id="msg"></div>
+<button onclick="f1()">修改child的offsetParent----parent.position</button>
+<button onclick="f2()">修改child的offsetParent----warp.position</button>
+<script>
+  const parent = $(".parent");
+  const child = $(".child");
+  const warp = $(".warp");
+  const msg = $("#msg");
+  function f1() {
+    if (parent.style.position == "absolute") {
+      parent.style.position = "static";
+    } else {
+      parent.style.position = "absolute";
+    }
+    update();
+  }
+  function f2() {
+    if (warp.style.position == "relative") {
+      warp.style.position = "static";
+    } else {
+      warp.style.position = "relative";
+    }
+    update();
+  }
+  function update() {
+    const childInfo = domInfo(child);
+    msg.innerText = JSON.stringify(childInfo);
+  }
+  update();
+</script>

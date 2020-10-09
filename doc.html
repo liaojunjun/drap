@@ -1,0 +1,796 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create for ggdoc , @author sunyi</title>
+    <style>
+        .octicon{display:inline-block;fill:currentColor;vertical-align:text-bottom}
+        .anchor{float:left;line-height:1;margin-left:-20px;padding-right:4px}
+        .anchor:focus{outline:0}
+        h1 .octicon-link,h2 .octicon-link,h3 .octicon-link,h4 .octicon-link,h5 .octicon-link,h6 .octicon-link{color:#1b1f23;vertical-align:middle;visibility:hidden}
+        h1:hover .anchor,h2:hover .anchor,h3:hover .anchor,h4:hover .anchor,h5:hover .anchor,h6:hover .anchor{text-decoration:none}
+        h1:hover .anchor .octicon-link,h2:hover .anchor .octicon-link,h3:hover .anchor .octicon-link,h4:hover .anchor .octicon-link,h5:hover .anchor .octicon-link,h6:hover .anchor .octicon-link{visibility:visible}
+        h1:hover .anchor .octicon-link:before,h2:hover .anchor .octicon-link:before,h3:hover .anchor .octicon-link:before,h4:hover .anchor .octicon-link:before,h5:hover .anchor .octicon-link:before,h6:hover .anchor .octicon-link:before{width:16px;height:16px;content:" ";display:inline-block;background-image:url("data:image/svg+xml,%3Csvgxmlns='http://www.w3.org/2000/svg'viewBox='001616'version='1.1'width='16'height='16'aria-hidden='true'%3E%3Cpathfill-rule='evenodd'd='M49h1v1H4c-1.50-3-1.69-3-3.5S2.55343h4c1.45031.6933.501.41-.912.72-23.25V8.59c.58-.451-1.271-2.09C105.228.98484H4c-.980-21.22-22.5S3949zm9-3h-1v1h1c1021.2222.5S13.98121312H9c-.980-2-1.22-2-2.50-.83.42-1.641-2.09V6.25c-1.09.53-21.84-23.25C611.317.5513913h4c1.4503-1.693-3.5S14.56136z'%3E%3C/path%3E%3C/svg%3E")}
+        body{-webkit-text-size-adjust:100%;line-height:1.5;color:#24292e;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;font-size:16px;line-height:1.5;word-wrap:break-word;background-color:#e3e3ef;height:100%;width:100%;margin:0;padding:20px}
+        details{display:block}
+        summary{display:list-item}
+        a{background-color:initial}
+        a:active,a:hover{outline-width:0}
+        strong{font-weight:inherit;font-weight:bolder}
+        h1{font-size:2em;margin:.67em 0}
+        img{border-style:none}
+        code,kbd,pre{font-family:monospace,monospace;font-size:1em}
+        hr{box-sizing:initial;height:0;overflow:visible}
+        input{font:inherit;margin:0}
+        input{overflow:visible}
+        [type="checkbox"]{box-sizing:border-box;padding:0}
+        *{box-sizing:border-box}
+        input{font-family:inherit;font-size:inherit;line-height:inherit}
+        a{color:#0366d6;text-decoration:none}
+        a:hover{text-decoration:underline}
+        strong{font-weight:600}
+        hr{height:0;margin:15px 0;overflow:hidden;background:transparent;border:0;border-bottom:1px solid #dfe2e5}
+        hr:after,hr:before{display:table;content:""}
+        hr:after{clear:both}
+        table{border-spacing:0;border-collapse:collapse}
+        td,th{padding:0}
+        details summary{cursor:pointer}
+        kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}
+        h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0}
+        h1{font-size:32px}
+        h1,h2{font-weight:600}
+        h2{font-size:24px}
+        h3{font-size:20px}
+        h3,h4{font-weight:600}
+        h4{font-size:16px}
+        h5{font-size:14px}
+        h5,h6{font-weight:600}
+        h6{font-size:12px}
+        p{margin-top:0;margin-bottom:10px}
+        blockquote{margin:0}
+        ol,ul{padding-left:0;margin-top:0;margin-bottom:0}
+        ol ol,ul ol{list-style-type:lower-roman}
+        ol ol ol,ol ul ol,ul ol ol,ul ul ol{list-style-type:lower-alpha}
+        dd{margin-left:0}
+        code,pre{font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px}
+        pre{margin-top:0;margin-bottom:0}
+        input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{margin:0;-webkit-appearance:none;appearance:none}
+        :checked+.radio-label{position:relative;z-index:1;border-color:#0366d6}
+        .border{border:1px solid #e1e4e8!important}
+        .border-0{border:0!important}
+        .border-bottom{border-bottom:1px solid #e1e4e8!important}
+        .rounded-1{border-radius:3px!important}
+        .bg-white{background-color:#fff!important}
+        .bg-gray-light{background-color:#fafbfc!important}
+        .text-gray-light{color:#6a737d!important}
+        .mb-0{margin-bottom:0!important}
+        .my-2{margin-top:8px!important;margin-bottom:8px!important}
+        .pl-0{padding-left:0!important}
+        .py-0{padding-top:0!important;padding-bottom:0!important}
+        .pl-1{padding-left:4px!important}
+        .pl-2{padding-left:8px!important}
+        .py-2{padding-top:8px!important;padding-bottom:8px!important}
+        .pl-3,.px-3{padding-left:16px!important}
+        .px-3{padding-right:16px!important}
+        .pl-4{padding-left:24px!important}
+        .pl-5{padding-left:32px!important}
+        .pl-6{padding-left:40px!important}
+        .f6{font-size:12px!important}
+        .lh-condensed{line-height:1.25!important}
+        .text-bold{font-weight:600!important}
+        .pl-c{color:#6a737d}
+        .pl-c1,.pl-s .pl-v{color:#005cc5}
+        .pl-e,.pl-en{color:#6f42c1}
+        .pl-s .pl-s1,.pl-smi{color:#24292e}
+        .pl-ent{color:#22863a}
+        .pl-k{color:#d73a49}
+        .pl-pds,.pl-s,.pl-s .pl-pse .pl-s1,.pl-sr,.pl-sr .pl-cce,.pl-sr .pl-sra,.pl-sr .pl-sre{color:#032f62}
+        .pl-smw,.pl-v{color:#e36209}
+        .pl-bu{color:#b31d28}
+        .pl-ii{color:#fafbfc;background-color:#b31d28}
+        .pl-c2{color:#fafbfc;background-color:#d73a49}
+        .pl-c2:before{content:"^M"}
+        .pl-sr .pl-cce{font-weight:700;color:#22863a}
+        .pl-ml{color:#735c0f}
+        .pl-mh,.pl-mh .pl-en,.pl-ms{font-weight:700;color:#005cc5}
+        .pl-mi{font-style:italic;color:#24292e}
+        .pl-mb{font-weight:700;color:#24292e}
+        .pl-md{color:#b31d28;background-color:#ffeef0}
+        .pl-mi1{color:#22863a;background-color:#f0fff4}
+        .pl-mc{color:#e36209;background-color:#ffebda}
+        .pl-mi2{color:#f6f8fa;background-color:#005cc5}
+        .pl-mdr{font-weight:700;color:#6f42c1}
+        .pl-ba{color:#586069}
+        .pl-sg{color:#959da5}
+        .pl-corl{text-decoration:underline;color:#032f62}
+        .mb-0{margin-bottom:0!important}
+        .my-2{margin-bottom:8px!important}
+        .my-2{margin-top:8px!important}
+        .pl-0{padding-left:0!important}
+        .py-0{padding-top:0!important;padding-bottom:0!important}
+        .pl-1{padding-left:4px!important}
+        .pl-2{padding-left:8px!important}
+        .py-2{padding-top:8px!important;padding-bottom:8px!important}
+        .pl-3{padding-left:16px!important}
+        .pl-4{padding-left:24px!important}
+        .pl-5{padding-left:32px!important}
+        .pl-6{padding-left:40px!important}
+        .pl-7{padding-left:48px!important}
+        .pl-8{padding-left:64px!important}
+        .pl-9{padding-left:80px!important}
+        .pl-10{padding-left:96px!important}
+        .pl-11{padding-left:112px!important}
+        .pl-12{padding-left:128px!important}
+        hr{border-bottom-color:#eee}
+        kbd{display:inline-block;padding:3px 5px;font:11px SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;line-height:10px;color:#444d56;vertical-align:middle;background-color:#fafbfc;border:1px solid #d1d5da;border-radius:3px;box-shadow:inset 0 -1px 0 #d1d5da}
+        .markdown-body:after,.markdown-body:before{display:table;content:""}
+        .markdown-body:after{clear:both}
+        .markdown-body>:first-child{margin-top:0!important}
+        .markdown-body>:last-child{margin-bottom:0!important}
+        a:not([href]){color:inherit;text-decoration:none}
+        blockquote,details,dl,ol,p,pre,table,ul{margin-top:0;margin-bottom:16px}
+        hr{height:.25em;padding:0;margin:24px 0;background-color:#e1e4e8;border:0}
+        blockquote{padding:0 1em;color:#6a737d;border-left:.25em solid #dfe2e5}
+        blockquote>:first-child{margin-top:0}
+        blockquote>:last-child{margin-bottom:0}
+        h1,h2,h3,h4,h5,h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}
+        h1{font-size:2em}
+        h1,h2{padding-bottom:.3em;border-bottom:1px solid #eaecef}
+        h2{font-size:1.5em}
+        h3{font-size:1.25em}
+        h4{font-size:1em}
+        h5{font-size:.875em}
+        h6{font-size:.85em;color:#6a737d}
+        ol,ul{padding-left:2em}
+        ol ol,ol ul,ul ol,ul ul{margin-top:0;margin-bottom:0}
+        li{word-wrap:break-all}
+        li>p{margin-top:16px}
+        li+li{margin-top:.25em}
+        dl{padding:0}
+        dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:600}
+        dl dd{padding:0 16px;margin-bottom:16px}
+        table{display:block;width:100%;overflow:auto}
+        table th{font-weight:600}
+        table td,table th{padding:6px 13px;border:1px solid #dfe2e5}
+        table tr{background-color:#fff;border-top:1px solid #c6cbd1}
+        table tr:nth-child(2n){background-color:#f6f8fa}
+        img{max-width:100%;box-sizing:initial;background-color:#fff}
+        img[align="right"]{padding-left:20px}
+        img[align="left"]{padding-right:20px}
+        code{padding:.2em .4em;margin:0;font-size:85%;background-color:rgba(27,31,35,0.05);border-radius:3px}
+        pre{word-wrap:normal}
+        pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}
+        .highlight{margin-bottom:16px}
+        .highlight pre{margin-bottom:0;word-break:normal}
+        .highlight pre,pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f6f8fa;border-radius:3px}
+        pre code{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:initial;border:0}
+        .commit-tease-sha{display:inline-block;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:90%;color:#444d56}
+        .full-commit .btn-outline:not(:disabled):hover{color:#005cc5;border-color:#005cc5}
+        .blob-wrapper{overflow-x:auto;overflow-y:hidden}
+        .blob-wrapper-embedded{max-height:240px;overflow-y:auto}
+        .blob-num{width:1%;min-width:50px;padding-right:10px;padding-left:10px;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;line-height:20px;color:rgba(27,31,35,0.3);text-align:right;white-space:nowrap;vertical-align:top;cursor:pointer;user-select:none}
+        .blob-num:hover{color:rgba(27,31,35,0.6)}
+        .blob-num:before{content:attr(data-line-number)}
+        .blob-code{position:relative;padding-right:10px;padding-left:10px;line-height:20px;vertical-align:top}
+        .blob-code-inner{overflow:visible;font-family:SFMono-Regular,Consolas,Liberation Mono,Menlo,monospace;font-size:12px;color:#24292e;word-wrap:normal;white-space:pre}
+        .pl-token.active,.pl-token:hover{cursor:pointer;background:#ffea7f}
+        .tab-size[data-tab-size="1"]{-moz-tab-size:1;tab-size:1}
+        .tab-size[data-tab-size="2"]{-moz-tab-size:2;tab-size:2}
+        .tab-size[data-tab-size="3"]{-moz-tab-size:3;tab-size:3}
+        .tab-size[data-tab-size="4"]{-moz-tab-size:4;tab-size:4}
+        .tab-size[data-tab-size="5"]{-moz-tab-size:5;tab-size:5}
+        .tab-size[data-tab-size="6"]{-moz-tab-size:6;tab-size:6}
+        .tab-size[data-tab-size="7"]{-moz-tab-size:7;tab-size:7}
+        .tab-size[data-tab-size="8"]{-moz-tab-size:8;tab-size:8}
+        .tab-size[data-tab-size="9"]{-moz-tab-size:9;tab-size:9}
+        .tab-size[data-tab-size="10"]{-moz-tab-size:10;tab-size:10}
+        .tab-size[data-tab-size="11"]{-moz-tab-size:11;tab-size:11}
+        .tab-size[data-tab-size="12"]{-moz-tab-size:12;tab-size:12}
+        .task-list-item{list-style-type:none}
+        .task-list-item+.task-list-item{margin-top:3px}
+        .task-list-item input{margin:0 .2em .25em -1.6em;vertical-align:middle}
+        #page{width:calc(100% - 300px);margin-left:300px}
+        fieldset{display:none;background-color:#fff;border:0;overflow:hidden;box-shadow:2px 2px 10px rgba(128,128,128,0.2);margin-bottom:20px;padding:20px}
+        fieldset legend{font-weight:bold;color:green;height:3.5em;margin-left:-20px;padding:0}
+        #nav{background:rgb(255 255 255 / .6);padding:40px;position:fixed;top:0;left:0;bottom:0;width:300px;overflow-y:auto}
+        ::-webkit-scrollbar{width:5px}
+        ::-webkit-scrollbar-thumb{background-color:#79a5e8}
+        @media print,(max-width:900px){
+          #nav{display:none!important}
+          #page{width:100%!important;margin-left:0!important}
+          fieldset{display:block!important;box-shadow:none!important}
+          .toggle-hash-btn {display: none !important;}
+        }
+        .hljs{display:block;overflow-x:auto;padding:.5em;color:#333;background:#f8f8f8}
+        .hljs-comment,.hljs-quote{color:#998;font-style:italic}
+        .hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:bold}
+        .hljs-number,.hljs-literal,.hljs-variable,.hljs-template-variable,.hljs-tag .hljs-attr{color:#008080}
+        .hljs-string,.hljs-doctag{color:#d14}
+        .hljs-title,.hljs-section,.hljs-selector-id{color:#900;font-weight:bold}
+        .hljs-subst{font-weight:normal}
+        .hljs-type,.hljs-class .hljs-title{color:#458;font-weight:bold}
+        .hljs-tag,.hljs-name,.hljs-attribute{color:#000080;font-weight:normal}
+        .hljs-regexp,.hljs-link{color:#009926}
+        .hljs-symbol,.hljs-bullet{color:#990073}
+        .hljs-built_in,.hljs-builtin-name{color:#0086b3}
+        .hljs-meta{color:#999;font-weight:bold}
+        .hljs-deletion{background:#fdd}
+        .hljs-addition{background:#dfd}
+        .hljs-emphasis{font-style:italic}
+        .hljs-strong{font-weight:bold}
+        .toggle-hash-btn {position: fixed;bottom: 10px;left:10px;z-index: 1000; display: flex; justify-content: space-between;  width: 270px;}
+    </style>
+    <script>
+          const $ = selector => document.querySelector(selector);
+          const $$ = selector => document.querySelectorAll(selector);
+          const decode = s => decodeURIComponent(s);
+          const domInfo = dom => ({
+            offsetParent: dom.offsetParent.className,
+            offsetLeft: dom.offsetLeft,
+            offsetTop: dom.offsetTop,
+            clientWidth: dom.clientWidth,
+            offsetWidth: dom.offsetWidth,
+            BoundingClientRect: dom.getBoundingClientRect(),
+          });
+          let openHash = false;
+          function viewFieldset() {
+            const hash = decode(location.hash);
+            if(openHash && hash &&$(`fieldset${hash}`)) {
+              Array.from($$('fieldset')).forEach(dom  =>dom.style.display = 'none');
+              $(`fieldset${hash}`).style.display = 'block';
+            }else {
+              Array.from($$('fieldset')).forEach(dom  =>dom.style.display = 'block');
+            }
+          }
+          window.onhashchange = viewFieldset;
+          window.onload  = ()=>{
+            viewFieldset();
+            setATarget();
+          };
+          
+          function toggleHash() {
+            openHash = !openHash;
+            viewFieldset();
+            $('.toggle-hash-btn button').innerText = openHash ? '关闭专注模式' : '开启专注模式';
+          }
+          function setATarget() {
+            $$('#page a').forEach(a=>a.target = '_blank');
+          }
+    </script>
+</head>
+
+<body>
+  <div class="toggle-hash-btn">
+    <button  onclick="toggleHash()">开启专注模式</button>
+     <a target='_blank' href="https://github.com/liaojunjun/ggdoc"><svg class="octicon octicon-mark-github v-align-middle" height="25" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg></a>
+  </div><div id="page">
+      <fieldset id='_xRTMSO'>
+      <legend>event</legend>
+      <p><a href="https://wangdoc.com/javascript/events/drag.html">相关文档</a></p>
+<blockquote>
+<p>图片、链接默认可以拖拉，设置draggable为false防止其拖拉。元素节点设置draggable为true让其可以拖拉，内部文字或子节点就无法用鼠标选中</p>
+</blockquote>
+<ul>
+<li><code>drag</code> 拖拉过程中，持续触发</li>
+<li><code>dragstart</code> 被拖拉节点在拖拉开始时触发。指定拖拉的数据</li>
+<li><code>dragend</code>  被拖拉节点在拖拉结束时触发</li>
+<li><code>dragenter</code> 进入节点触发，如果当前节点没有该事件的监听函数，或者监听函数不执行任何操作，就意味着不允许在当前节点放下数据</li>
+<li><code>dragover</code> 进入节点持续触发，只要没离开</li>
+<li><code>dragleave</code> 拖拉操作离开当前节点范围触发</li>
+<li><code>drop</code> 释放到目标节点时，在目标节点上触发。取出拖拉数据，并进行相关处理</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_qqJZwT'>
+      <legend>cancel</legend>
+      <ul>
+<li>拖拉过程只触发以上这些拖拉事件，尽管鼠标在移动，但是鼠标事件不会触发</li>
+<li>将文件从操作系统拖拉进浏览器，不会触发 dragstart 和 dragend 事件</li>
+<li>节点默认不允许接受被拖拉的元素。阻止 dragenter 和 dragover 默认行为，让节点可接受被拖拉元素。</li>
+</ul>
+
+      </fieldset>
+      
+      <fieldset id='_Bio6VB'>
+      <legend>swap</legend>
+      <p>资源互换，<a href="https://stackblitz.com/edit/sunyi-drag-swap?">演示</a></p>
+<pre><code class="language-html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>
+  (<span class="hljs-attr">dragenter</span>)=<span class="hljs-string">&quot;dragenter($event)&quot;</span>
+  (<span class="hljs-attr">dragover</span>)=<span class="hljs-string">&quot;dragover($event)&quot;</span>
+  (<span class="hljs-attr">dragleave</span>)=<span class="hljs-string">&quot;dragleave($event)&quot;</span>
+  (<span class="hljs-attr">drop</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>
+&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">span</span>
+    *<span class="hljs-attr">ngFor</span>=<span class="hljs-string">&quot;let s of [1,2,3,4,5,6,7,8,9]&quot;</span>
+    <span class="hljs-attr">draggable</span>=<span class="hljs-string">&quot;true&quot;</span>
+    (<span class="hljs-attr">dragstart</span>)=<span class="hljs-string">&quot;dragstart($event)&quot;</span>
+    (<span class="hljs-attr">dragend</span>)=<span class="hljs-string">&quot;dragend($event)&quot;</span>
+    &gt;</span>可拖拽{{s}}<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>
+  &gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span>
+  <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;box&quot;</span>
+  (<span class="hljs-attr">dragenter</span>)=<span class="hljs-string">&quot;dragenter($event)&quot;</span>
+  (<span class="hljs-attr">dragover</span>)=<span class="hljs-string">&quot;dragover($event)&quot;</span>
+  (<span class="hljs-attr">dragleave</span>)=<span class="hljs-string">&quot;dragleave($event)&quot;</span>
+  (<span class="hljs-attr">drop</span>)=<span class="hljs-string">&quot;drop($event)&quot;</span>
+&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+<pre><code class="language-ts">
+  span;
+  dragstart(e) {
+    e.target.classList.add(<span class="hljs-string">&quot;drag&quot;</span>);
+    <span class="hljs-built_in">this</span>.span = e.target;
+  }
+  dragend(e) {
+    e.target.classList.remove(<span class="hljs-string">&quot;drag&quot;</span>);
+  }
+  dragenter(e) {
+    e.stopPropagation();
+    e.preventDefault();
+    <span class="hljs-keyword">if</span> (e.target.classList.contains(<span class="hljs-string">&quot;box&quot;</span>)) {
+      e.target.classList.add(<span class="hljs-string">&quot;drag&quot;</span>);
+    }
+  }
+  dragover(e) {
+    e.stopPropagation();
+    e.preventDefault();
+  }
+  dragleave(e) {
+    e.target.classList.remove(<span class="hljs-string">&quot;drag&quot;</span>);
+  }
+  drop(e) {
+    <span class="hljs-keyword">if</span> (e.target.classList.contains(<span class="hljs-string">&quot;box&quot;</span>)) {
+      <span class="hljs-built_in">this</span>.span.parentNode.removeChild(<span class="hljs-built_in">this</span>.span);
+      e.target.appendChild(<span class="hljs-built_in">this</span>.span);
+    }
+    <span class="hljs-built_in">this</span>.span = <span class="hljs-literal">null</span>;
+    e.target.classList.remove(<span class="hljs-string">&quot;drag&quot;</span>);
+  }
+</code></pre>
+<pre><code class="language-css"><span class="hljs-selector-tag">div</span> {
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#eee</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">4px</span>;
+  <span class="hljs-attribute">height</span>: <span class="hljs-number">200px</span>;
+  <span class="hljs-attribute">width</span>: <span class="hljs-number">400px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#fefefe</span>;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+}
+
+<span class="hljs-selector-tag">span</span> {
+  <span class="hljs-attribute">display</span>: inline-block;
+  <span class="hljs-attribute">border</span>: <span class="hljs-number">2px</span> dotted transparent;
+  <span class="hljs-attribute">margin</span>: <span class="hljs-number">20px</span>;
+  <span class="hljs-attribute">background</span>: <span class="hljs-number">#eee</span>;
+  <span class="hljs-attribute">padding</span>: <span class="hljs-number">2px</span>;
+  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">2px</span>;
+}
+<span class="hljs-selector-class">.drag</span> {
+  <span class="hljs-attribute">border-color</span>: green;
+}</code></pre>
+
+      </fieldset>
+      
+      <fieldset id='_GBg8vM'>
+      <legend>geometry</legend>
+      <p>部分内容来自：<a href="https://zh.javascript.info/">https://zh.javascript.info/</a></p>
+<p>几何</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="670" height="602" viewBox="0 0 670 602">
+    <defs>
+    </defs>
+    <defs>
+        <linearGradient id="linearGradient-1" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" />
+            <stop offset="100%" stop-color="#F1F1F1" />
+        </linearGradient>
+        <linearGradient id="linearGradient-2" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" />
+            <stop offset="100%" stop-color="#F1F1F1" />
+        </linearGradient>
+    </defs>
+    <g id="dom" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g id="metric-all.svg"><text id="Introduction" fill="#5A4739" font-family="OpenSans-Bold, Open Sans"
+                font-size="16" font-weight="bold">
+                <tspan x="160" y="94">Introduction</tspan>
+                <tspan x="160" y="122" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    This Ecma Standard is based on several </tspan>
+                <tspan x="160" y="141" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    originating technologies, the most well </tspan>
+                <tspan x="160" y="160" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    known being JavaScript (Netscape) and </tspan>
+                <tspan x="160" y="179" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    JScript (Microsoft). The language was </tspan>
+                <tspan x="160" y="198" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    invented by Brendan Eich at Netscape and </tspan>
+                <tspan x="160" y="217" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    first appeared in that company’s Navigator </tspan>
+                <tspan x="160" y="236" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">2.0
+                    browser. It has appeared in all </tspan>
+                <tspan x="160" y="255" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    subsequent browsers from Netscape and </tspan>
+                <tspan x="160" y="274" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">in
+                    all browsers from Microsoft starting with </tspan>
+                <tspan x="160" y="293" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Internet Explorer 3.0.</tspan>
+                <tspan x="160" y="312" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">The
+                    development of this Standard started </tspan>
+                <tspan x="160" y="331" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">in
+                    November 1996. The first edition of this </tspan>
+                <tspan x="160" y="350" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Ecma Standard was adopted by the Ecma </tspan>
+                <tspan x="160" y="369" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    General Assembly of June 1997.</tspan>
+                <tspan x="160" y="388" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    That Ecma Standard was submitted to ISO/</tspan>
+                <tspan x="160" y="407" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">IEC
+                    JTC 1 for adoption under the fast-track </tspan>
+                <tspan x="160" y="426" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    procedure, and approved as international </tspan>
+                <tspan x="160" y="445" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    standard ISO/IEC 16262, in April 1998. The </tspan>
+                <tspan x="160" y="464" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Ecma General Assembly of June 1998 </tspan>
+                <tspan x="160" y="483" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    approved the second edition of ECMA-262 </tspan>
+                <tspan x="160" y="502" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">to
+                    keep it fully aligned with ISO/IEC 16262. </tspan>
+                <tspan x="160" y="521" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    Changes between the first and the second </tspan>
+                <tspan x="160" y="540" font-family="OpenSans-Regular, Open Sans" font-size="14" font-weight="normal">
+                    edition are editorial in nature.</tspan>
+            </text>
+            <path id="Rectangle-1" fill="#E8C48F" fill-opacity=".88"
+                d="M491 162v290H117V162h374zm-25 25H142v240h324V187z" />
+            <path id="Rectangle-2" stroke="#E8C48F" stroke-opacity=".8" stroke-width="2" d="M141 62h326v500H141z" />
+            <text id="scrollHeight" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 592 310)">
+                <tspan x="541.6" y="314.5">scrollHeight</tspan>
+            </text><text id="offsetHeight" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 552 310)">
+                <tspan x="501.6" y="314.5">offsetHeight</tspan>
+            </text><text id="scrollTop" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 618 125)">
+                <tspan x="580.2" y="129.5">scrollTop</tspan>
+            </text>
+            <path id="Line-27" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M466.5 62H640" />
+            <path id="Line-28" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M492.5 163h92.14" />
+            <path id="Line-29" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M492.5 451h92.14" />
+            <path id="Line-33" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M467.5 189H640" />
+            <path id="Line-32" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M467.5 427h72.14" />
+            <path id="Line-26" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M466.5 561h148.14" />
+            <path id="Line-25" fill="#EE6B47" fill-rule="nonzero"
+                d="M605 64.5l7 14h-6v466h6l-7 14-7-14h6v-466h-6l7-14z" />
+            <path id="Line-30" fill="#EE6B47" fill-rule="nonzero"
+                d="M565 164.5l7 14h-6v255h6l-7 14-7-14h6v-255h-6l7-14z" /><text id="clientHeight" fill="#EE6B47"
+                font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"
+                transform="rotate(-90 510 304)">
+                <tspan x="459.6" y="308.5">clientHeight</tspan>
+            </text>
+            <path id="Line-34" fill="#EE6B47" fill-rule="nonzero"
+                d="M523 191.5l7 14h-6v206h6l-7 14-7-14h6v-206h-6l7-14z" /><text id="offsetTop" fill="#EE6B47"
+                font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal"
+                transform="rotate(-90 104 83)">
+                <tspan x="66.2" y="87.5">offsetTop</tspan>
+            </text><text id="clientLeft" fill="#C74A6C" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal" transform="rotate(-90 130.5 237)">
+                <tspan x="88.5" y="241.5">clientLeft</tspan>
+            </text>
+            <path id="Line-36" fill="#EE6B47" fill-rule="nonzero"
+                d="M117 4.5l7 14h-6v128h6l-7 14-7-14h6v-128h-6l7-14z" />
+            <path id="Line-31" fill="#EE6B47" fill-rule="nonzero"
+                d="M631 64.5l7 14h-6v96.499l6 .001-7 14-7-14 6-.001V78.5h-6l7-14z" />
+            <path id="Rectangle-14" fill="#FFF" fill-opacity=".88" d="M154 73h312v89H154z" />
+            <path id="Rectangle-15" fill="#FFF" fill-opacity=".88" d="M154 451h312v93H154z" />
+            <path id="Line-39" fill="#EE6B47" fill-rule="nonzero"
+                d="M431 479.09l14 7-14 7-.001-6h-271.36l.001 6-14-7 14-7-.001 6h271.36l.001-6z" />
+            <path id="Line-42" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M445.64 510v-84" />
+            <path id="Line-43" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M141.64 510v-84" /><text id="clientWidth" fill="#EE6B47" font-family="PTMono-Regular, PT Mono"
+                font-size="14" font-weight="normal">
+                <tspan x="261.3" y="478">clientWidth</tspan>
+            </text>
+            <path id="Line-41" fill="#EE6B47" fill-rule="nonzero"
+                d="M100 156.09l14 7-14 7v-6H18.639l.001 6-14-7 14-7-.001 6H100v-6z" /><text id="clientTop"
+                fill="#C74A6C" font-family="PTMono-Regular, PT Mono" font-size="14" font-weight="normal">
+                <tspan x="147.7" y="178">clientTop</tspan>
+            </text><text id="offsetLeft" fill="#EE6B47" font-family="PTMono-Regular, PT Mono" font-size="14"
+                font-weight="normal">
+                <tspan x="17.5" y="154">offsetLeft</tspan>
+            </text>
+            <path id="Line-40" fill="#EE6B47" fill-rule="nonzero"
+                d="M475 522.09l14 7-14 7-.001-6h-340.36l.001 6-14-7 14-7-.001 6h340.36l.001-6z" />
+            <path id="Line-45" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M490.64 551V447" />
+            <path id="Line-44" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M116.64 551V447" /><text id="offsetWidth" fill="#EE6B47" font-family="PTMono-Regular, PT Mono"
+                font-size="14" font-weight="normal">
+                <tspan x="258.3" y="516">offsetWidth</tspan>
+            </text>
+            <path id="Rectangle-233" stroke="#8A704D" stroke-width="2" d="M1 1h668v600H1z" />
+            <g id="Scrollbar" transform="translate(450 187)">
+                <rect id="Rectangle-19" width="15" height="239" x=".5" y=".5" fill="#F3F2F2" stroke="#E9E9E9" rx="3" />
+                <g id="Rectangle-18-+-Triangle-1">
+                    <rect id="Rectangle-18" width="15" height="19" x=".5" y=".5" fill="url(#linearGradient-1)"
+                        stroke="#CFCFCF" rx="3" />
+                    <path id="Triangle-1" fill="#92979F" d="M8 7l3.2 6H4.8z" />
+                </g>
+                <g id="Rectangle-18-+-Triangle-2" transform="matrix(1 0 0 -1 0 240)">
+                    <rect id="Rectangle-18" width="15" height="19" x=".5" y=".5" fill="url(#linearGradient-1)"
+                        stroke="#CFCFCF" rx="3" />
+                    <path id="Triangle-1" fill="#92979F" d="M8 7l3.2 6H4.8z" />
+                </g>
+                <g id="Rectangle-18-+-Triangle-3-+-Group" transform="translate(0 50)">
+                    <g id="Rectangle-18-+-Triangle-3" fill="url(#linearGradient-2)" stroke="#CFCFCF"
+                        transform="matrix(1 0 0 -1 0 51)">
+                        <rect id="Rectangle-18" width="15" height="50" x=".5" y=".5" rx="3" />
+                    </g>
+                    <g id="Group" fill="#D8D8D8" stroke="#979797" transform="translate(4 20)">
+                        <path id="Rectangle-22" d="M.5.5h7v1h-7z" />
+                        <path id="Rectangle-23" d="M.5 3.5h7v1h-7z" />
+                        <path id="Rectangle-24" d="M.5 6.5h7v1h-7z" />
+                        <path id="Rectangle-25" d="M.5 9.5h7v1h-7z" />
+                    </g>
+                </g>
+            </g>
+            <g id="Group" transform="translate(115 162)">
+                <g id="Line-4-+-Line-5" stroke="#C74A6C" stroke-linecap="square" stroke-width="2"
+                    transform="translate(23 19)">
+                    <path id="Line-4" d="M2.5.5L0 6" transform="matrix(1 0 0 -1 0 6)" />
+                    <path id="Line-5" d="M5.5.5L3 6" transform="rotate(180 4.5 3)" />
+                </g>
+                <g id="Line-4-+-Line-6" stroke="#C74A6C" stroke-linecap="square" stroke-width="2"
+                    transform="matrix(1 0 0 -1 23 7)">
+                    <path id="Line-4" d="M2.5.5L0 6" transform="matrix(1 0 0 -1 0 6)" />
+                    <path id="Line-5" d="M5.5.5L3 6" transform="rotate(180 4.5 3)" />
+                </g>
+                <path id="Line-49" stroke="#C74A6C" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"
+                    d="M26.5 26h-25" />
+                <path id="Line-50" stroke="#C74A6C" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="2"
+                    d="M26 25.5V.5" />
+                <path id="Line-4" fill="#C74A6C" fill-rule="nonzero"
+                    d="M20.003 22.176l.91.414 5.5 2.5.911.413-.59 1.296.09.198-.225.1-.102.227-.198-.09-.385.176-5.5 2.5-.91.414-.828-1.82.91-.414 4.297-1.954-3.797-1.726-.91-.413.827-1.821zM7.997 22.176l.827 1.82-.91.414-3.798 1.726 4.298 1.954.91.413-.827 1.821-.91-.414-5.5-2.5-.387-.176-.197.09-.102-.225-.225-.102.089-.198-.59-1.296.911-.413 5.5-2.5.91-.414z" />
+            </g>
+        </g>
+    </g>
+</svg>
+
+<ol>
+<li>确定 offsetParent, 用于计算坐标<ul>
+<li>上级中 position 为 absolute、relative、fixed 的</li>
+<li>td,th,table</li>
+<li>body</li>
+</ul>
+</li>
+<li>offsetLeft,offsetTop 都是相对于 offsetParent 的</li>
+</ol>
+<p>elem.getBoundingClientRect()</p>
+<svg xmlns="http://www.w3.org/2000/svg" width="521" height="411" viewBox="0 0 521 411">
+    <g id="dom" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g id="coordinates.svg">
+            <g id="noun_69008_cc" fill="#E8C48E" transform="translate(13 11)">
+                <path id="Shape"
+                    d="M490.563 386H10.438C4.676 386 0 381.658 0 376.35V9.65C0 4.342 4.676 0 10.438 0h480.125C496.303 0 501 4.343 501 9.65v366.7c0 5.308-4.697 9.65-10.438 9.65zm-480.4-12.939h478.642V12.94H10.162V373.06z" />
+                <path id="Shape"
+                    d="M20.859 54.1c-5.753 0-10.422-1.147-10.422-2.55 0-1.402 4.67-2.55 10.422-2.55H479.4c5.732 0 10.422 1.148 10.422 2.55 0 1.403-4.69 2.55-10.422 2.55H20.86zM33.8 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0zM63.988 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0zM94.177 31.627a6.024 6.024 0 11-12.05 0 6.024 6.024 0 1112.05 0z" />
+            </g><text id="height" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="417" y="208">height</tspan>
+            </text><text id="bottom" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="451" y="311">bottom</tspan>
+            </text>
+            <path id="Line-28" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M395 293h103" />
+            <path id="Line-30" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M392 296v74.5" />
+            <path id="Line-30-Copy" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M119 296v46" />
+            <path id="Line-29" stroke="#EE6B47" stroke-dasharray="3,6" stroke-linecap="square" stroke-width="2"
+                d="M396 120h30" /><text id="x" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14"
+                font-weight="bold">
+                <tspan x="62" y="113">x</tspan>
+            </text><text id="left" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="50" y="135">left</tspan>
+            </text><text id="y" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="125" y="79">y</tspan>
+            </text><text id="width" fill="#EE6B47" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="234" y="339">width</tspan>
+            </text>
+            <path id="Line" fill="#EE6B47" fill-rule="nonzero" d="M414 118.5V273h8l-9.5 19-9.5-19h8V118.5h3z" />
+            <path id="Line-Copy" fill="#999" fill-rule="nonzero" d="M476 65v208h8l-9.5 19-9.5-19h8V65h3z" />
+            <path id="Line-2" fill="#EE6B47" fill-rule="nonzero"
+                d="M371 309l19 9.5-19 9.5-.001-8H116v-3h254.999l.001-8z" />
+            <path id="Line-3" fill="#EE6B47" fill-rule="nonzero"
+                d="M100.05 109.903l18.95 9.6-19.05 9.4.042-8.001-76.5-.402-1.5-.008.016-3 1.5.008 76.5.402.042-8z" />
+            <text id="right" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="180" y="375">right</tspan>
+            </text>
+            <path id="Line-3-Copy-2" fill="#999" fill-rule="nonzero" d="M371 350l19 9.5-19 9.5v-8H21.005v-3H371v-8z" />
+            <path id="Line-3-Copy" fill="#EE6B47" fill-rule="nonzero"
+                d="M119 65v1.5l.003 34.249h8l-9.498 19.001-9.502-19h8L116 66.5V65h3z" />
+            <path id="Rectangle-1" fill="#E8C48F" fill-opacity=".88"
+                d="M392.629 119v175H118V119h274.629zM382 129H129v155h253V129z" /><text id="Introduction-This-Ec"
+                fill="#5A4739" font-family="OpenSans-Bold, Open Sans" font-size="16" font-weight="bold" opacity=".8">
+                <tspan x="138.946" y="153.8">Introduction</tspan>
+                <tspan x="138.946" y="181.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">This Ecma Standard is based on </tspan>
+                <tspan x="138.946" y="200.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">several originating technologies, </tspan>
+                <tspan x="138.946" y="219.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">the most well known being </tspan>
+                <tspan x="138.946" y="238.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">JavaScript (Netscape) and JScript </tspan>
+                <tspan x="138.946" y="257.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">(Microsoft). The language was </tspan>
+                <tspan x="138.946" y="276.8" font-family="OpenSans-Regular, Open Sans" font-size="14"
+                    font-weight="normal">invented by Brendan Eich at </tspan>
+            </text><text id="top" fill="#999" font-family="PTMono-Bold, PT Mono" font-size="14" font-weight="bold">
+                <tspan x="125" y="96">top</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
+
+<style>
+    .parent,.child,.warp {
+        box-sizing:content-box;
+    }
+  .parent {
+    border: 50px solid #333;
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+  }
+  .child {
+    background-color: red;
+    border: 20px solid #333;
+    width: 30px;
+    height: 30px;
+    margin: 20px auto;
+  }
+  .warp {
+    padding: 100px;
+    border: 10px solid green;
+  }
+</style>
+<div class="warp">
+  <div class="parent">
+    <div class="child"></div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />
+<div id="msg"></div>
+<button onclick="f1()">修改child的offsetParent----parent.position</button>
+<button onclick="f2()">修改child的offsetParent----warp.position</button>
+<script>
+  const parent = $(".parent");
+  const child = $(".child");
+  const warp = $(".warp");
+  const msg = $("#msg");
+  function f1() {
+    if (parent.style.position == "absolute") {
+      parent.style.position = "static";
+    } else {
+      parent.style.position = "absolute";
+    }
+    update();
+  }
+  function f2() {
+    if (warp.style.position == "relative") {
+      warp.style.position = "static";
+    } else {
+      warp.style.position = "relative";
+    }
+    update();
+  }
+  function update() {
+    const childInfo = domInfo(child);
+    msg.innerText = JSON.stringify(childInfo);
+  }
+  update();
+</script>
+
+      </fieldset>
+      
+      <fieldset id='_uUl4sy'>
+      <legend>slideUnlock</legend>
+      <p>效果</p>
+<style>
+  #unlock_slide-unlock .unlock_warp {
+    position: relative;
+    background-color: lightseagreen;
+    width: 1000px;
+    height: 600px;
+  }
+  #unlock_slide-unlock .unlock_slide {
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    z-index: 100;
+    background-color: #333;
+  }
+  #unlock_slide-unlock .unlock_gap {
+    position: absolute;
+    top: 200px;
+    left: 800px;
+    z-index: 1;
+    background-color: #fff;
+  }
+  #unlock_slide-unlock .unlock_slide,
+  #unlock_slide-unlock .unlock_gap {
+    width: 100px;
+    height: 100px;
+  }
+</style>
+<div id="unlock_slide-unlock">
+  <div class="unlock_warp">
+    <div class="unlock_slide"></div>
+    <div class="unlock_gap"></div>
+  </div>
+</div>
+<script>
+  const unlock_warp = $(".unlock_warp");
+  const unlock_slide = $(".unlock_slide");
+  const unlock_gap = $(".unlock_gap");
+  let x, y;
+  const originalLeft = unlock_slide.offsetLeft,
+    originalTop = unlock_slide.offsetTop,
+    warpLeft = unlock_warp.offsetLeft,
+    warpTop = unlock_warp.offsetTop,
+    gapLeft = unlock_gap.offsetLeft,
+    gapTop = unlock_gap.offsetTop;
+  const setCursor = (v) => (unlock_slide.style.cursor = v);
+  function setSlide(left, top) {
+    unlock_slide.style.left = left + "px";
+    unlock_slide.style.top = top + "px";
+  }
+  function mousemove(e) {
+    const { pageX, pageY } = e;
+    setSlide(pageX - x - warpLeft, pageY - y - warpTop);
+  }
+  function mouseup(e) {
+    setCursor("auto");
+    unlock_slide.removeEventListener("mousemove", mousemove);
+    if (
+      Math.abs(unlock_slide.offsetLeft - gapLeft) < 5 &&
+      Math.abs(unlock_slide.offsetTop - gapTop) < 5
+    ) {
+      console.log("解锁成功");
+      setSlide(gapLeft, gapTop);
+      window.removeEventListener("mouseup", mouseup);
+      unlock_slide.removeEventListener("mousedown", mousedown);
+    } else {
+      setSlide(originalLeft, originalTop);
+    }
+  }
+  function mousedown(e) {
+    setCursor("move");
+    const { pageX, pageY } = e;
+    x = pageX - unlock_slide.offsetLeft - warpLeft;
+    y = pageY - unlock_slide.offsetTop - warpTop;
+    unlock_slide.addEventListener("mousemove", mousemove, false);
+  }
+  window.addEventListener("mouseup", mouseup, false);
+  unlock_slide.addEventListener("mousedown", mousedown, false);
+</script>
+
+      </fieldset>
+      
+      <fieldset id='_cqa2uB'>
+      <legend>signature</legend>
+      <p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event">https://developer.mozilla.org/en-US/docs/Web/API/Element/mousedown_event</a></p>
+
+      </fieldset>
+      </div><div id="nav"><div style="margin-left:0em"><strong>拖拽的实现</strong><br/></div><div style="margin-left:1em"><strong>事件</strong><br/></div><div style="margin-left:3em"><a href="#_xRTMSO">event</a><br/></div><div style="margin-left:3em"><a href="#_qqJZwT">cancel</a><br/></div><div style="margin-left:1em"><strong>实例</strong><br/></div><div style="margin-left:3em"><a href="#_Bio6VB">swap</a><br/></div><div style="margin-left:0em"><strong>几何属性</strong><br/></div><div style="margin-left:2em"><a href="#_GBg8vM">geometry</a><br/></div><div style="margin-left:1em"><strong>滑动解锁</strong><br/></div><div style="margin-left:3em"><a href="#_uUl4sy">slideUnlock</a><br/></div><div style="margin-left:1em"><strong>签名</strong><br/></div><div style="margin-left:3em"><a href="#_cqa2uB">signature</a><br/></div></div>
+</body></html>
